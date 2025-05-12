@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Coupon {
+  id                String     @id @default(uuid()) @db.Uuid
+  product_id        String     @db.Uuid
+  code              String
+  type              CouponType
+  value             Decimal    @db.Decimal(10, 2)
+  start_date        DateTime
+  end_date          DateTime
+  limit             Int        @default(0)            
+  used              Int        @default(0)        
+  created_at        DateTime   @default(now())
+  updated_at        DateTime   @updatedAt
+}
+
+enum CouponType {
+  percentage
+  fixed_value
+}
