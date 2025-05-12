@@ -1,0 +1,9 @@
+INSERT INTO public."Product" (id,name,description,price,available,establishment_id,created_at,updated_at) VALUES
+	 ('47a02487-575c-4b60-b977-caaf4b88e600'::uuid,'Elegant Rubber Car','Vigor curriculum cupio adficio tergeo suadeo acceptus.',164.79,true,'1f9f5bac-c20b-4ce3-8595-563d1ee0afd7','2025-05-10 21:39:52.902','2025-05-10 21:39:52.902'),
+	 ('60085025-6efc-474f-a0e3-26edd58909dd'::uuid,'Generic Steel Soap','Vito compello architecto aestus demitto.',965.85,true,'1f9f5bac-c20b-4ce3-8595-563d1ee0afd7','2025-05-10 22:03:48.719','2025-05-10 22:03:48.719'),
+	 ('3d1731aa-0a62-4186-9649-675ce902146b'::uuid,'Tasty Granite Salad','Nostrum arx varietas varius cupiditas iste vix distinctio hic.',181.65,true,'3448d417-186e-4f57-b5f3-edfff7eb7020','2025-05-12 12:17:59.271','2025-05-12 12:17:59.271'),
+	 ('bf11f007-fe33-4241-ad19-de76b6a0df0f'::uuid,'Incredible Ceramic Sausages','Sortitus tondeo defleo voluptas ancilla.',827.95,true,'3448d417-186e-4f57-b5f3-edfff7eb7020','2025-05-12 12:18:00.479','2025-05-12 12:18:00.479'),
+	 ('5a45360b-30d6-4089-9e14-0a10d76aed96'::uuid,'Rustic Bamboo Soap','Denuo abeo supellex amor undique.',349.15,true,'5f659861-1ae8-4705-86e8-310637992588','2025-05-12 12:18:16.008','2025-05-12 12:18:16.008'),
+	 ('32f0b60b-a550-4d21-b36b-c80dd02f1858'::uuid,'Bespoke Bronze Ball','Textor crebro defessus arma.',321.89,true,'5f659861-1ae8-4705-86e8-310637992588','2025-05-12 12:18:16.705','2025-05-12 12:18:16.705'),
+	 ('c6bac10c-c2ab-4575-bda8-8fe0e0690c84'::uuid,'Soft Wooden Table','Verto vicinus cogo ultra vir.',671.29,true,'75d169d5-7dcb-4bbf-a181-faf7c510b787','2025-05-12 12:18:30.506','2025-05-12 12:18:30.506'),
+	 ('17189aed-5c90-43f3-8aae-5d4c1c3f9281'::uuid,'Handmade Bronze Car','Absque adficio vallum a tantum urbs deserunt vesco circumvenio texo.',103.15,true,'75d169d5-7dcb-4bbf-a181-faf7c510b787','2025-05-12 12:18:30.800','2025-05-12 12:18:30.800');

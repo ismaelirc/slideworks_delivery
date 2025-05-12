@@ -1,0 +1,301 @@
+type: collection.insomnia.rest/5.0
+name: Services
+meta:
+  id: wrk_e3c523288bfe4853bc206636a3a7fe63
+  created: 1746532674811
+  modified: 1746738870513
+collection:
+  - name: Establishment
+    meta:
+      id: fld_df074f2a81f44836947a6bd6b204bd40
+      created: 1746738877240
+      modified: 1746738877240
+      sortKey: -1746738877240
+    children:
+      - url: localhost:3000/v1/establishment
+        name: Create Establishment
+        meta:
+          id: req_fecfc6b2ce584774b3b7a59f5306f3ef
+          created: 1746532674831
+          modified: 1746738887373
+          isPrivate: false
+          sortKey: -1746738887340
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "{% faker 'randomUUID' %}",
+            	"name": "{% faker 'randomCompanyName' %}",
+            	"document": "{% faker 'randomBankAccount' %}",
+            	"address": "{% faker 'randomStreetAddress' %}",
+            	"phone":"{% faker 'randomPhoneNumber' %}"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/v1/establishment
+        name: List Establishments
+        meta:
+          id: req_b0264f81effe47a08bad3bb024e579c9
+          created: 1746650896274
+          modified: 1746738892114
+          isPrivate: false
+          sortKey: -1746738887440
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/v1/establishment/e4704d15-5ac8-4590-8a6b-939a946d32d
+        name: Establishment by ID
+        meta:
+          id: req_4c84e607883446638d50ed47da2c388d
+          created: 1746651869361
+          modified: 1746796779527
+          isPrivate: false
+          sortKey: -1746738887540
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/v1/health
+        name: Health check
+        meta:
+          id: req_bea19ef803af4d03b382eb240be15c3f
+          created: 1746981732580
+          modified: 1746981749051
+          isPrivate: false
+          sortKey: -1746981732580
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Product
+    meta:
+      id: fld_ee9d4272b5254479b1b009f2eac02de5
+      created: 1746738905313
+      modified: 1746738905313
+      sortKey: -1746738905314
+    children:
+      - url: localhost:3001/v1/product
+        name: List products
+        meta:
+          id: req_bd52b3ff13274d3c9e48fbe7c740bb77
+          created: 1746738909382
+          modified: 1747053530223
+          isPrivate: false
+          sortKey: -1746739496255
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3001/v1/product
+        name: Create product
+        meta:
+          id: req_29df90ff27de4ba0b7f097a27063e479
+          created: 1746792386524
+          modified: 1747052308843
+          isPrivate: false
+          sortKey: -1746739496355
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "{% faker 'randomUUID' %}",
+            	"name": "{% faker 'randomProductName' %}",
+            	"description": "{% faker 'randomLoremSentence' %}",
+            	"price": {% faker 'randomPrice' %},
+            	"available": true,
+            	"establishment_id": "75d169d5-7dcb-4bbf-a181-faf7c510b787"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3001/v1/health
+        name: Health check
+        meta:
+          id: req_83531ce78deb46fd91f63f1127f9edb9
+          created: 1746982086856
+          modified: 1746982101763
+          isPrivate: false
+          sortKey: -1746982086856
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Coupon
+    meta:
+      id: fld_19024622e4aa486c87973986d3ab4f51
+      created: 1746906304109
+      modified: 1746906304109
+      sortKey: -1746738891277
+    children:
+      - url: localhost:3002/v1/coupon
+        name: Create Coupon
+        meta:
+          id: req_451e9750434c4a569dced6ce86072e3e
+          created: 1746906304114
+          modified: 1747054379529
+          isPrivate: false
+          sortKey: -1746739496355
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": "{% faker 'randomUUID' %}",
+              "code": "SUMMER2025",
+              "type": "fixed_value",
+              "value": 10.50,
+            	"limit": 5,
+              "start_date": "{% faker 'randomDatePast' %}",
+              "end_date": "{% faker 'randomDateFuture' %}",
+              "products": ["c6bac10c-c2ab-4575-bda8-8fe0e0690c84","3d1731aa-0a62-4186-9649-675ce902146b"]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3002/v1/coupon
+        name: List Coupons
+        meta:
+          id: req_77b82176f13e4deb91c2facf56f6fe64
+          created: 1746906335910
+          modified: 1747053524133
+          isPrivate: false
+          sortKey: -1746739496455
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3002/v1/coupon/redeem/SUMMER2027/47a02487-575c-4b60-b977-caaf4b88e600
+        name: Redeem Coupon
+        meta:
+          id: req_e2b24f48f274412f9ce3f7cb495044c2
+          created: 1746926303955
+          modified: 1746932356390
+          isPrivate: false
+          sortKey: -1746926303955
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3002/v1/health
+        name: Health check
+        meta:
+          id: req_c839f969e72e4ceb8877c146821202c4
+          created: 1746933456612
+          modified: 1746981699043
+          isPrivate: false
+          sortKey: -1746926304055
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_71fdbbe9113726e562662302b80262ba269f0521
+    created: 1746532674815
+    modified: 1746532674815
+environments:
+  name: Base Environment
+  meta:
+    id: env_71fdbbe9113726e562662302b80262ba269f0521
+    created: 1746532674814
+    modified: 1746532674814
+    isPrivate: false
